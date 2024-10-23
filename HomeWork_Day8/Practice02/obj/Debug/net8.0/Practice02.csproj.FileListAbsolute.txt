@@ -1,0 +1,14 @@
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\bin\Debug\net8.0\Practice02.exe
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\bin\Debug\net8.0\Practice02.deps.json
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\bin\Debug\net8.0\Practice02.runtimeconfig.json
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\bin\Debug\net8.0\Practice02.dll
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\bin\Debug\net8.0\Practice02.pdb
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.AssemblyInfo.cs
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.dll
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\refint\Practice02.dll
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.pdb
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\Practice02.genruntimeconfig.cache
+C:\Users\Dell\Desktop\Cybersoft .NET\Homework\HomeWork_Day8\Practice02\obj\Debug\net8.0\ref\Practice02.dll
