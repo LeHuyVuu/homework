@@ -1,0 +1,15 @@
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\bin\Debug\net8.0\ProductManagement.exe
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\bin\Debug\net8.0\ProductManagement.deps.json
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\bin\Debug\net8.0\ProductManagement.runtimeconfig.json
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\bin\Debug\net8.0\ProductManagement.dll
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\bin\Debug\net8.0\ProductManagement.pdb
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.AssemblyInfoInputs.cache
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.AssemblyInfo.cs
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.csproj.CoreCompileInputs.cache
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.sourcelink.json
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.dll
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\refint\ProductManagement.dll
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.pdb
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ProductManagement.genruntimeconfig.cache
+D:\Cybersoft .NET\Homework\HomeWork_Day13\ProductManagement\obj\Debug\net8.0\ref\ProductManagement.dll
