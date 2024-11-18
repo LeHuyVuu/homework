@@ -1,0 +1,15 @@
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\bin\Debug\net8.0\StoreManagement.exe
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\bin\Debug\net8.0\StoreManagement.deps.json
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\bin\Debug\net8.0\StoreManagement.runtimeconfig.json
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\bin\Debug\net8.0\StoreManagement.dll
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\bin\Debug\net8.0\StoreManagement.pdb
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.AssemblyInfoInputs.cache
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.AssemblyInfo.cs
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.csproj.CoreCompileInputs.cache
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.sourcelink.json
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.dll
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\refint\StoreManagement.dll
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.pdb
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\StoreManagement.genruntimeconfig.cache
+D:\Cybersoft .NET\Homework\HomeWorkDay15\StoreManagement\obj\Debug\net8.0\ref\StoreManagement.dll
