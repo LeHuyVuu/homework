@@ -1,5 +1,435 @@
-breacrumb-section{
-    container{
-        
+@import './base';
+
+
+header {
+  .container {
+    .row {
+      .col-md-6 {
+        .border-end {
+          border-right: 2px solid #ddd; // Đường kẻ dọc
+          height: 100%;
+        }
+      }
+
+      .col-md-6 {
+        .login-icon {
+          .text-dark {
+            text-decoration: none;
+          }
+        }
+      }
     }
+  }
+}
+
+
+
+.section-search-shop {
+  .container {
+    .row {
+      .logo-image {
+        // ...
+      }
+
+      .search-input {
+          height: 40px;
+        .input-category-search {
+          display: flex; // Sử dụng Flexbox để sắp xếp các phần tử
+          justify-content: center; // Căn giữa theo chiều dọc
+          .category-text {
+            font-size: 0.875rem; /* Điều chỉnh kích thước chữ */
+            white-space: nowrap; /* Đảm bảo chữ không bị xuống dòng */
+          }
+          .fa-sharp{
+            height: 100%;
+          }
+        }
+
+        .input {
+          width: 100%;
+          border: none;
+          outline: none;
+        }
+        .btn-search{
+          background-color: $text-warning;
+          border-radius: 0%;
+        }
+      }
+
+      .icon-search {
+        display: flex;
+        align-items: center; // Căn giữa icon theo chiều dọc
+        justify-content: flex-end; // Đẩy các item về phía bên phải
+      
+        .item {
+          position: relative; // Định vị badge trên icon
+          font-size: 1.5rem; // Tăng kích thước icon
+          color: #000; // Màu của icon
+      
+          &.item-1 {
+            margin-right: 1rem; // Tạo khoảng cách giữa Wishlist và Cart
+          }
+      
+          .badge {
+            position: absolute; // Đặt badge trên góc icon
+            top: -0.5rem; // Dịch lên trên
+            right: -0.5rem; // Dịch sang bên phải
+            background-color: #f1c40f; // Màu vàng (giống trong ảnh)
+            color: #fff; // Màu chữ của badge
+            font-size: 0.75rem; // Kích thước chữ
+            width: 1.25rem; // Chiều rộng badge
+            height: 1.25rem; // Chiều cao badge
+            border-radius: 50%; // Làm tròn badge
+            display: flex; // Đặt số ở giữa badge
+            align-items: center; // Căn giữa theo chiều dọc
+            justify-content: center; // Căn giữa theo chiều ngang
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); // Tùy chọn: hiệu ứng đổ bóng
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+
+
+
+.navbar{
+  height: 65px;
+}
+
+
+
+.breacrumb-section {
+  .breadcrumb-text {
+    a {
+      text-decoration: none; // Bỏ gạch chân
+      color: #000; // Màu đen cho chữ
+
+      &:hover {
+        color: #555; // Màu xám khi hover (tuỳ chọn)
+      }
+    }
+
+    span {
+      color: $text-gray; // Màu đen cho chữ "Shop"
+    }
+  }
+  .hr{
+    width: 50%;
+    border: 1px solid #000;
+
+  }
+}
+
+.section-product-grid {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; // Space between columns
+    gap: 1.5rem; // Increase spacing between cards
+  }
+
+  .col-md-4 {
+    flex: 0 0 calc(33.333% - 1.5rem); // One-third width with adjusted gap
+    max-width: calc(33.333% - 1.5rem);
+  }
+
+  .card {
+    border: none;
+    overflow: hidden; // Ensure content stays within bounds
+    margin-bottom: 2px;
+
+    .position-relative {
+      background-color: #f9f9f9; // Subtle background for images
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+
+     
+
+    
+    }
+
+    .badge {
+      font-size: 0.8rem; // Slightly smaller badge
+      background-color: #ffc107; // Match design yellow
+      color: #000;
+      border-radius: 0rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem; // Adjust font size
+      
+      color: $text-gray; // Neutral color for title
+      margin-top: 0.75rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem; // Slightly larger for better readability
+      color: #ffc107; // Bright red for price
+      margin: 0.25rem 0;
+      font-weight: bold;
+
+      span {
+        font-size: 0.85rem; // Reduced for the strikethrough price
+        color: #8e8e8e; // Muted gray
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-product-grid{
+  .card {
+    position: relative;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .wishlist-icon {
+    font-size: 1.2rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .wishlist-icon:hover {
+    color: #e63946; /* Red on hover */
+  }
+  
+  .hover-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .card:hover .hover-actions {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .btn-hover-action {
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0.4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-hover-action i {
+    font-size: 1.2rem;
+  }
+  
+  .btn-hover-action:hover {
+    color: #ffc107; /* Yellow on hover */
+  }
+  
+  
+}
+
+.filter-section {
+  padding: 1rem 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #fff;
+
+  h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.7rem;
+      font-size: 0.9rem;
+
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      label {
+        cursor: pointer;
+        color: #555;
+
+        &:hover {
+          color: #ffc107;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #555;
+
+        &:hover {
+          color: #ffc107;
+        }
+      }
+    }
+  }
+
+  input[type="range"] {
+    width: 100%;
+    margin: 0.5rem 0;
+    appearance: none;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background: #ffc107;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  button {
+    width: 100%;
+    background-color: #ffc107;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d4a106;
+    }
+  }
+
+  .color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .badge {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: transparent;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s;
+      }
+    }
+  }
+
+  .size-buttons {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ffc107;
+        color: #fff;
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .tag {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f8f9fa;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ffc107;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.footer {
+  color: $text-gray; // Màu chữ mặc định cho nội dung trong footer
+  padding-bottom: 16px;
+  a { // Áp dụng style cho thẻ <a>
+    text-decoration: none; // Bỏ gạch chân
+  }
+  .input{
+    background-color: gray;
+  }
+  button{
+    background-color: $bg-warning;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+  }
 }
