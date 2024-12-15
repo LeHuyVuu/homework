@@ -83,6 +83,166 @@
       crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/css/home.css" />
     <link rel="stylesheet" href="/assets/css/shop.css" />
+    <style>
+   .filter-section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+
+      h5 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #555;
+
+            &:hover {
+              color: #ff7f47;
+            }
+          }
+        }
+      }
+
+      .price-range {
+        margin-bottom: 20px;
+
+        input {
+          width: 100%;
+        }
+
+        div {
+          font-size: 14px;
+          color: #555;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .btn {
+        background-color: #ff7f47;
+        color: #fff;
+        border: none;
+        width: 100%;
+        margin-top: 20px;
+
+        &:hover {
+          background-color: #e96e3c;
+        }
+      }
+
+      .color-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        .color-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .color-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+          }
+
+          &.black .color-circle { background-color: #000; }
+          &.blue .color-circle { background-color: #007bff; }
+          &.red .color-circle { background-color: #dc3545; }
+          &.green .color-circle { background-color: #28a745; }
+          &.yellow .color-circle { background-color: #ffc107; }
+          &.violet .color-circle { background-color: #6f42c1; }
+        }
+      }
+
+      .size-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+
+        button {
+          background-color: transparent;
+          color: #333;
+          border: 1px solid #ccc;
+          font-size: 14px;
+          font-weight: bold;
+          width: 50px;
+          height: 35px;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #ff7f47;
+            color: #fff;
+            border-color: #ff7f47;
+          }
+        }
+      }
+
+      .tag-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .badge {
+          background-color: transparent;
+          color: #333;
+          font-size: 14px;
+          padding: 8px 12px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #ff7f47;
+            color: #fff;
+            border-color: #ff7f47;
+          }
+        }
+      }
+    }
+    .loading-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+      margin-top: 40px;
+  .spinner-border {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+
+  span {
+    margin-left: 10px;
+    border-bottom: 2px solid #ff7f47;
+    padding-bottom: 2px;
+  }
+}
+
+
+
+
+    </style>
   </head>
 
   <body>
@@ -299,40 +459,63 @@
 
               <!-- Price -->
               <h5 class="mt-4 mb-3">Price</h5>
-              <input type="range" min="10" max="100" class="form-range" />
-              <button class="btn btn-warning mt-2 w-100">Filter</button>
+              <div class="price-range">
+                <input type="range" min="33" max="98" class="form-range" />
+                <div>
+                  <span>$33</span>
+                  <span>$98</span>
+                </div>
+              </div>
 
               <!-- Color -->
               <h5 class="mt-4 mb-3">Color</h5>
-              <ul class="list-unstyled d-flex flex-wrap gap-2">
-                <li><span class="badge bg-dark">Black</span></li>
-                <li><span class="badge bg-primary">Blue</span></li>
-                <li><span class="badge bg-danger">Red</span></li>
-                <li><span class="badge bg-success">Green</span></li>
-                <li><span class="badge bg-warning text-dark">Yellow</span></li>
-                <li><span class="badge bg-light text-dark">Violet</span></li>
-              </ul>
+              <div class="color-options">
+                <div class="color-item black">
+                  <div class="color-circle"></div>
+                  <span>Black</span>
+                </div>
+                <div class="color-item blue">
+                  <div class="color-circle"></div>
+                  <span>Blue</span>
+                </div>
+                <div class="color-item red">
+                  <div class="color-circle"></div>
+                  <span>Red</span>
+                </div>
+                <div class="color-item green">
+                  <div class="color-circle"></div>
+                  <span>Green</span>
+                </div>
+                <div class="color-item yellow">
+                  <div class="color-circle"></div>
+                  <span>Yellow</span>
+                </div>
+                <div class="color-item violet">
+                  <div class="color-circle"></div>
+                  <span>Violet</span>
+                </div>
+              </div>
 
               <!-- Size -->
               <h5 class="mt-4 mb-3">Size</h5>
-              <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-outline-secondary">S</button>
-                <button class="btn btn-outline-secondary">M</button>
-                <button class="btn btn-outline-secondary">L</button>
-                <button class="btn btn-outline-secondary">XL</button>
-                <button class="btn btn-outline-secondary">XS</button>
+              <div class="size-options">
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <button>XS</button>
               </div>
 
               <!-- Tags -->
               <h5 class="mt-4 mb-3">Tags</h5>
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-secondary">Towel</span>
-                <span class="badge bg-secondary">Shoes</span>
-                <span class="badge bg-secondary">Coat</span>
-                <span class="badge bg-secondary">Dresses</span>
-                <span class="badge bg-secondary">Trousers</span>
-                <span class="badge bg-secondary">Men's hats</span>
-                <span class="badge bg-secondary">Backpack</span>
+              <div class="tag-options">
+                <span class="badge">Towel</span>
+                <span class="badge">Shoes</span>
+                <span class="badge">Coat</span>
+                <span class="badge">Dresses</span>
+                <span class="badge">Trousers</span>
+                <span class="badge">Men's hats</span>
+                <span class="badge">Backpack</span>
               </div>
             </div>
           </div>
@@ -590,8 +773,11 @@
             </div>
 
             <!-- Load More -->
-            <div class="text-center mt-4">
-              <button class="btn btn-warning">Loading More</button>
+            <div class="loading-more d-flex align-items-center">
+              <div class="spinner-border text-warning me-2" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <span>Loading More</span>
             </div>
           </div>
         </div>
