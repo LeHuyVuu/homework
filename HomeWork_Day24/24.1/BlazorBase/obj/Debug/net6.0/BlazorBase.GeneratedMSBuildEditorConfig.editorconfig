@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorBase
+build_property.RootNamespace = BlazorBase
+build_property.ProjectDir = D:\Cybersoft .NET\Homework\HomeWork_Day24\24.1\BlazorBase\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Cybersoft .NET\Homework\HomeWork_Day24\24.1\BlazorBase
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/About/AboutComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xBYm91dFxBYm91dENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-m7qf8a0r62
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/Awards/AwardComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xBd2FyZHNcQXdhcmRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xzj1ajhhjo
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/Education/EducationComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xFZHVjYXRpb25cRWR1Y2F0aW9uQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-d8rwwvxx06
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/Experience/ExperienceComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xFeHBlcmllbmNlXEV4cGVyaWVuY2VDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0vsrz00qx4
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/Interests/InterestsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xJbnRlcmVzdHNcSW50ZXJlc3RzQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-z77rha20my
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/Sidebar/Sidebar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xTaWRlYmFyXFNpZGViYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-wvnv92ct8x
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/components/Skills/SkillComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xTa2lsbHNcU2tpbGxDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-b9qsn7od3s
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-1wxhx5kwhp
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cybersoft .NET/Homework/HomeWork_Day24/24.1/BlazorBase/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

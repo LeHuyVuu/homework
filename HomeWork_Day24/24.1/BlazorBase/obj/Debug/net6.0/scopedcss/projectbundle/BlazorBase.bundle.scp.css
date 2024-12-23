@@ -1,0 +1,380 @@
+/* _content/BlazorBase/Pages/components/About/AboutComponent.razor.rz.scp.css */
+body[b-m7qf8a0r62] {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 100vh;
+}
+
+.main-content[b-m7qf8a0r62] {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.name-title[b-m7qf8a0r62] {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.name-title span[b-m7qf8a0r62] {
+    color: #d45523; /* Màu cam nổi bật */
+}
+
+.contact-info[b-m7qf8a0r62] {
+    font-size: 1rem;
+    color: #666;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.contact-info a[b-m7qf8a0r62] {
+    color: #d45523;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bio[b-m7qf8a0r62] {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons[b-m7qf8a0r62] {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a[b-m7qf8a0r62] {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover[b-m7qf8a0r62] {
+    color: #d45523;
+}
+/* _content/BlazorBase/Pages/components/Awards/AwardComponent.razor.rz.scp.css */
+.awards[b-xzj1ajhhjo] {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    margin-top: 150px;
+    background-color: #fff; /* Nền trắng */
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    text-align: left;
+}
+
+.awards h2[b-xzj1ajhhjo] {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #222; /* Màu đậm cho tiêu đề */
+    border-bottom: 4px solid #f39c12; /* Đường gạch dưới màu cam */
+    display: inline-block;
+}
+
+.awards-list[b-xzj1ajhhjo] {
+    list-style: none; /* Loại bỏ bullet mặc định */
+    padding: 0;
+    margin: 0;
+}
+
+.awards-list li[b-xzj1ajhhjo] {
+    font-size: 16px;
+    line-height: 1.8; /* Khoảng cách dòng thoáng */
+    color: #555; /* Màu xám cho nội dung */
+    margin-bottom: 10px;
+    position: relative; /* Để thêm biểu tượng cup */
+    padding-left: 30px; /* Đẩy nội dung sang phải */
+}
+
+.awards-list li[b-xzj1ajhhjo]::before {
+    content: "🏆"; /* Biểu tượng cup */
+    position: absolute;
+    left: 0;
+    font-size: 18px; /* Kích thước biểu tượng */
+    color: #f39c12; /* Màu cam cho biểu tượng */
+}
+/* _content/BlazorBase/Pages/components/Education/EducationComponent.razor.rz.scp.css */
+.education[b-d8rwwvxx06] {
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 20px;
+    max-width: 800px; /* Giới hạn chiều rộng */
+    color: #333;
+}
+
+.education h2[b-d8rwwvxx06] {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Chữ hoa */
+    color: #222; /* Màu chữ đậm hơn */
+    border-bottom: 4px solid #f39c12; /* Đường gạch dưới */
+    display: inline-block;
+}
+
+.education-item[b-d8rwwvxx06] {
+    margin-bottom: 40px; /* Khoảng cách giữa các mục */
+}
+
+.education-item h3[b-d8rwwvxx06] {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000; /* Màu đen cho tiêu đề trường học */
+    text-transform: uppercase; /* Chữ in hoa */
+}
+
+.education-item h4[b-d8rwwvxx06] {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #555; /* Màu xám cho tiêu đề chương trình học */
+}
+
+.education-item p[b-d8rwwvxx06] {
+    font-size: 14px;
+    color: #666; /* Màu xám nhạt hơn */
+    margin: 5px 0;
+}
+
+.education-date[b-d8rwwvxx06] {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a35728; /* Màu cam nổi bật cho ngày tháng */
+    margin-top: 10px;
+}
+/* _content/BlazorBase/Pages/components/Experience/ExperienceComponent.razor.rz.scp.css */
+.experience[b-0vsrz00qx4] {
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 750px; /* Đặt chiều rộng tối đa */
+    color: #333;
+}
+
+.experience h2[b-0vsrz00qx4] {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Chữ hoa */
+    border-bottom: 4px solid #f39c12; /* Đường gạch dưới */
+    display: inline-block;
+    color: #222; /* Màu chữ đậm hơn */
+}
+
+.job[b-0vsrz00qx4] {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px; /* Khoảng cách giữa các mục */
+    border-bottom: 1px solid #ddd; /* Đường kẻ nhạt */
+    padding-bottom: 20px;
+}
+
+.job:last-child[b-0vsrz00qx4] {
+    border-bottom: none; /* Bỏ đường kẻ cuối cùng */
+}
+
+.job-details[b-0vsrz00qx4] {
+    max-width: 30%; /* Chiếm 30% không gian */
+}
+
+.job-details h4[b-0vsrz00qx4] {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+    text-transform: uppercase; /* Chữ in hoa */
+}
+
+.job-details h5[b-0vsrz00qx4] {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #f39c12; /* Màu cam */
+}
+
+.job-details p[b-0vsrz00qx4] {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.job-description[b-0vsrz00qx4] {
+    max-width: 65%; /* Chiếm 65% không gian */
+}
+
+.job-description p[b-0vsrz00qx4] {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8; /* Khoảng cách dòng rộng hơn */
+    margin: 0;
+}
+/* _content/BlazorBase/Pages/components/Interests/InterestsComponent.razor.rz.scp.css */
+.interests[b-z77rha20my] {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #fff; /* Nền trắng */
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    text-align: left;
+}
+
+.interests h2[b-z77rha20my] {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #222; /* Màu đậm cho tiêu đề */
+    border-bottom: 4px solid #f39c12; /* Đường gạch dưới màu cam */
+    display: inline-block;
+}
+
+.interests p[b-z77rha20my] {
+    font-size: 16px;
+    line-height: 1.8; /* Khoảng cách dòng thoáng */
+    color: #555; /* Màu xám cho văn bản */
+    margin-bottom: 20px;
+}
+/* _content/BlazorBase/Pages/components/Sidebar/Sidebar.razor.rz.scp.css */
+.sidebar[b-wvnv92ct8x] {
+    position: fixed; /* Giữ sidebar cố định */
+    top: 0;
+    left: 0; /* Đảm bảo sidebar bắt đầu từ mép trái */
+    background-color: #a35728; /* Màu nền */
+    color: white; /* Màu chữ */
+    height: 100%; /* Chiều cao toàn màn hình */
+    width: 20%; /* Đặt chiều rộng cố định */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Tính padding vào width và height */
+    padding: 20px 0; /* Thêm khoảng cách đều trên dưới */
+}
+
+.sidebar img[b-wvnv92ct8x] {
+    width: 150px; /* Kích thước hình ảnh */
+    height: 150px;
+    border-radius: 50%; /* Bo tròn hình ảnh */
+    margin-bottom: 20px; /* Khoảng cách giữa hình ảnh và link */
+}
+
+.sidebar a[b-wvnv92ct8x] {
+    color: white;
+    font-size: 18px; /* Kích thước chữ */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    margin: 10px 0; /* Khoảng cách giữa các liên kết */
+    text-align: center; /* Căn giữa chữ */
+    width: 100%; /* Đảm bảo liên kết chiếm toàn chiều rộng sidebar */
+}
+
+.sidebar a:hover[b-wvnv92ct8x] {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+/* _content/BlazorBase/Pages/components/Skills/SkillComponent.razor.rz.scp.css */
+.skills[b-b9qsn7od3s] {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    margin-top: 150px;
+    background-color: #fff; /* Nền trắng */
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    text-align: left;
+}
+
+.skills h2[b-b9qsn7od3s] {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #222; /* Màu đậm cho tiêu đề chính */
+    border-bottom: 4px solid #f39c12; /* Đường gạch dưới màu cam */
+    display: inline-block;
+}
+
+.skills-category[b-b9qsn7od3s] {
+    margin-bottom: 40px; /* Khoảng cách giữa các nhóm */
+}
+
+.skills-category h3[b-b9qsn7od3s] {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444; /* Màu xám đậm */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.skills-icons[b-b9qsn7od3s] {
+    display: flex;
+    flex-wrap: wrap; /* Hàng biểu tượng tự động xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các biểu tượng */
+    align-items: center;
+}
+
+.skills-icons i[b-b9qsn7od3s] {
+    font-size: 40px; /* Kích thước biểu tượng */
+    color: #666; /* Màu xám ban đầu */
+    transition: transform 0.3s ease, color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.skills-icons i:hover[b-b9qsn7od3s] {
+    color: #f39c12; /* Màu cam khi hover */
+    transform: scale(1.2); /* Phóng to nhẹ khi hover */
+}
+
+.skills-workflow[b-b9qsn7od3s] {
+    list-style: none; /* Loại bỏ bullet mặc định */
+    padding: 0;
+    margin: 0;
+}
+
+.skills-workflow li[b-b9qsn7od3s] {
+    font-size: 16px;
+    line-height: 1.8; /* Dòng thoáng */
+    color: #555; /* Màu xám nhạt */
+    margin-bottom: 10px;
+    position: relative; /* Để thêm biểu tượng checkmark */
+    padding-left: 25px; /* Đẩy nội dung sang phải */
+}
+
+.skills-workflow li[b-b9qsn7od3s]::before {
+    content: "✓"; /* Biểu tượng checkmark */
+    position: absolute;
+    left: 0;
+    color: #f39c12; /* Màu cam */
+    font-weight: bold;
+}
+/* _content/BlazorBase/Shared/MainLayout.razor.rz.scp.css */
+body[b-1wxhx5kwhp] {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
