@@ -31,3 +31,4 @@ D:\Cybersoft .NET\Homework\HomeWork_Day24\24.2\BlazorBase\obj\Debug\net6.0\Blazo
 D:\Cybersoft .NET\Homework\HomeWork_Day24\24.2\BlazorBase\obj\Debug\net6.0\BlazorBase.genruntimeconfig.cache
 D:\Cybersoft .NET\Homework\HomeWork_Day24\24.2\BlazorBase\obj\Debug\net6.0\ref\BlazorBase.dll
 D:\Cybersoft .NET\Homework\HomeWork_Day24\24.2\BlazorBase\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
+D:\Cybersoft .NET\Homework\HomeWork_Day24\24.2\BlazorBase\obj\Debug\net6.0\scopedcss\Pages\Car.razor.rz.scp.css

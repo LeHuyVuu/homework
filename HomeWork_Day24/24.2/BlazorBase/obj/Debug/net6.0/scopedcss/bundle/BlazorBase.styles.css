@@ -1,21 +1,20 @@
-/* _content/BlazorBase/Pages/Index.razor.rz.scp.css */
-
-
-h1[b-21rnzpc0mx]{
+/* _content/BlazorBase/Pages/Car.razor.rz.scp.css */
+h1[b-przbn9leq9]{
     font-weight: bold;
     padding: 120px;
 }
 
-img[b-21rnzpc0mx]{
+img[b-przbn9leq9]{
     width: 400px;
     height: 100%;
     margin-left: 50px;
 }
 
 
-button[b-21rnzpc0mx]{
+button[b-przbn9leq9]{
     height: 50px;
 }
+/* _content/BlazorBase/Pages/Index.razor.rz.scp.css */
 /* _content/BlazorBase/Shared/MainLayout.razor.rz.scp.css */
 .page[b-1wxhx5kwhp] {
     position: relative;
