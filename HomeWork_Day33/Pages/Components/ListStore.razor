@@ -1,0 +1,64 @@
+﻿@page "/list-store"
+@inject HttpClient _httpClient;
+
+<h1>Store List</h1>
+
+<button class="btn btn-primary mb-3">Create store</button>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Alias</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var store in StoreList)
+        {
+            <tr>
+                <td>@store.Id</td>
+                <td>@store.Name</td>
+                <td>@store.Alias</td>
+                <td>@store.Description</td>
+                <td>
+                    <img src="@store.ImageUrl" alt="Store Image" width="80" height="60" />
+                </td>
+                <td>
+                    <button class="btn btn-primary btn-sm me-2" @onclick="() => EditStore(store.Id)">Edit</button>
+                    <button class="btn btn-danger btn-sm" @onclick="() => DeleteStore(store.Id)">Del</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    
+    List<Store> StoreList = new List<Store>();
+    protected override async Task OnInitializedAsync()
+    {
+        GetAllListStore();
+    }
+
+    private void EditStore(int id)
+    {
+        Console.WriteLine($"Edit store with ID: {id}");
+    }
+
+    private void DeleteStore(int id)
+    {
+        StoreList.RemoveAll(s => s.Id == id);
+    }
+
+    private void GetAllListStore()
+    {
+        var url = "https://apistore.cybersoft.edu.vn/api/Store/getAll";
+        var response = _httpClient.GetFromJsonAsync<HTTPResponse>
+        
+
+    }
+}
