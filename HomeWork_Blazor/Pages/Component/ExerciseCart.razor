@@ -1,0 +1,73 @@
+@page "/exercise-cart"
+
+<div class="container">
+    <h1>Exercise Cart</h1>
+    <div class="text-end">
+        <CartItem productInCart="@productInCart" OnRemoveFromCart="HandleRemoveFromCart" />
+    </div>
+    <div class="row">
+        <ProductList listProduct="@Products" eventAddToCart="HandleAddToCart" />
+    </div>
+</div>
+
+@code {
+    private List<ProductVM> Products = new();
+
+    public List<ProductVM> productInCart { get; set; } = new List<ProductVM>();
+
+    public void HandleAddToCart(ProductVM productClick)
+    {
+        productInCart.Add(productClick);
+    }
+
+    private void HandleRemoveFromCart(ProductVM product)
+    {
+        productInCart.Remove(product); // Xóa sản phẩm khỏi giỏ hàng
+    }
+
+    protected override void OnInitialized()
+    {
+        Products = new List<ProductVM>
+        {
+            new ProductVM
+            {
+                MaSP = 1,
+                TenSP = "VinSmart Live",
+                ManHinh = "AMOLED, 6.2, Full HD+",
+                HeDieuHanh = "Android 9.0 (Pie)",
+                CameraTruoc = "20 MP",
+                CameraSau = "Chính 48 MP & Phụ 8 MP, 5 MP",
+                Ram = "4 GB",
+                Rom = "64 GB",
+                GiaBan = 5700000,
+                HinhAnh = "./img/vsphone.jpg"
+            },
+            new ProductVM
+            {
+                MaSP = 2,
+                TenSP = "Meizu 16Xs",
+                ManHinh = "AMOLED, FHD+ 2232 x 1080 pixels",
+                HeDieuHanh = "Android 9.0 (Pie); Flyme",
+                CameraTruoc = "20 MP",
+                CameraSau = "Chính 48 MP & Phụ 8 MP, 5 MP",
+                Ram = "4 GB",
+                Rom = "64 GB",
+                GiaBan = 7600000,
+                HinhAnh = "./img/meizuphone.jpg"
+            },
+            new ProductVM
+            {
+                MaSP = 3,
+                TenSP = "Iphone XS Max",
+                ManHinh = "OLED, 6.5, 1242 x 2688 Pixels",
+                HeDieuHanh = "iOS 12",
+                CameraTruoc = "7 MP",
+                CameraSau = "Chính 12 MP & Phụ 12 MP",
+                Ram = "4 GB",
+                Rom = "64 GB",
+                GiaBan = 27000000,
+                HinhAnh = "./img/applephone.jpg"
+            }
+        };
+    }
+}

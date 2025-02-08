@@ -1,64 +1,105 @@
 ﻿@page "/list-store"
 @inject HttpClient _httpClient;
+@inject ProductService ProductService;
+<style>
+    .table-responsive {
+        max-width: 900px;
+        margin: auto;
+    }
 
-<h1>Store List</h1>
+    .store-table {
+        width: 100%;
+        table-layout: fixed; /* Cố định cột để bảng không bị kéo dài */
+        font-size: 14px;
+    }
 
-<button class="btn btn-primary mb-3">Create store</button>
+    .store-table th, .store-table td {
+        white-space: nowrap; /* Ngăn chữ bị tràn */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 8px;
+    }
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Alias</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var store in StoreList)
-        {
+    .truncate-text {
+        max-width: 200px; /* Giới hạn chiều rộng của text */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .img-thumbnail {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+</style>
+
+<h1 class="text-center">Store List</h1>
+
+<a href="/store">
+    <button class="btn btn-primary mb-3">Create store</button>
+</a>
+
+<div class="table-responsive">
+    <table class="table table-bordered store-table">
+        <thead>
             <tr>
-                <td>@store.Id</td>
-                <td>@store.Name</td>
-                <td>@store.Alias</td>
-                <td>@store.Description</td>
-                <td>
-                    <img src="@store.ImageUrl" alt="Store Image" width="80" height="60" />
-                </td>
-                <td>
-                    <button class="btn btn-primary btn-sm me-2" @onclick="() => EditStore(store.Id)">Edit</button>
-                    <button class="btn btn-danger btn-sm" @onclick="() => DeleteStore(store.Id)">Del</button>
-                </td>
+                <th style="width: 5%;">Id</th>
+                <th style="width: 20%;">Name</th>
+                <th style="width: 20%;">Alias</th>
+                <th style="width: 30%;">Description</th>
+                <th style="width: 10%;">Image</th>
+                <th style="width: 15%;">Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @if (StoreList.Any())
+            {
+                @foreach (var store in StoreList)
+                {
+                    <tr>
+                        <td>@store.Id</td>
+                        <td>@store.Name</td>
+                        <td>@store.Alias</td>
+                        <td class="truncate-text">@store.Description</td>
+                        <td>
+                            <img src="@store.ImageUrl" alt="Store Image" class="img-thumbnail">
+                        </td>
+                        <td>
+                            <a href="/store/@store.Id">
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                            </a>
+                            <button class="btn btn-danger btn-sm" @onclick="() => DeleteStore(store.Id.ToString())">Delete</button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center">No stores available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
 
 @code {
-    
-    List<Store> StoreList = new List<Store>();
+    private List<Store> StoreList = new List<Store>();
+
     protected override async Task OnInitializedAsync()
     {
-        GetAllListStore();
+        StoreList = await ProductService.GetAllListStore();
     }
 
-    private void EditStore(int id)
+    private async Task DeleteStore(string id)
     {
-        Console.WriteLine($"Edit store with ID: {id}");
-    }
-
-    private void DeleteStore(int id)
-    {
-        StoreList.RemoveAll(s => s.Id == id);
-    }
-
-    private void GetAllListStore()
-    {
-        var url = "https://apistore.cybersoft.edu.vn/api/Store/getAll";
-        var response = _httpClient.GetFromJsonAsync<HTTPResponse>
-        
-
+        bool success = await ProductService.DeleteStore(id);
+        if (success)
+        {
+            StoreList = await ProductService.GetAllListStore();
+        }
     }
 }

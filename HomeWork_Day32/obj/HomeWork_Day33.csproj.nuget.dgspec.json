@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cybersoft .NET\\Homework\\HomeWork_Day33\\HomeWork_Day33.csproj": {}
+    "D:\\Cybersoft .NET\\Homework\\HomeWork_Day32\\HomeWork_Day33.csproj": {}
   },
   "projects": {
-    "D:\\Cybersoft .NET\\Homework\\HomeWork_Day33\\HomeWork_Day33.csproj": {
+    "D:\\Cybersoft .NET\\Homework\\HomeWork_Day32\\HomeWork_Day33.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cybersoft .NET\\Homework\\HomeWork_Day33\\HomeWork_Day33.csproj",
+        "projectUniqueName": "D:\\Cybersoft .NET\\Homework\\HomeWork_Day32\\HomeWork_Day33.csproj",
         "projectName": "HomeWork_Day33",
-        "projectPath": "D:\\Cybersoft .NET\\Homework\\HomeWork_Day33\\HomeWork_Day33.csproj",
+        "projectPath": "D:\\Cybersoft .NET\\Homework\\HomeWork_Day32\\HomeWork_Day33.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\Cybersoft .NET\\Homework\\HomeWork_Day33\\obj\\",
+        "outputPath": "D:\\Cybersoft .NET\\Homework\\HomeWork_Day32\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Blazorise": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            },
+            "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            },
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

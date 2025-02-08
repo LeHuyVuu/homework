@@ -1,0 +1,24 @@
+@page "/productItem"
+
+<div class="col-md-3">
+    <div class="card">
+        <div class="card-img-top">
+            <img src="@Product.HinhAnh" alt="" class="w-100">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Product.TenSP</h5>
+            <h6 class="card-title">@Product.GiaBan.ToString("N0")đ</h6>
+            <button class="btn btn-dark" @onclick="() => eventAddToCart.InvokeAsync(Product)"
+                data-bs-toggle="modalDetail" data-bs-target="#modalIdDetail">Detail</button>
+            <button class="btn btn-primary" @onclick="() => eventAddToCart.InvokeAsync(Product)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public ProductVM Product { get; set; }
+
+    [Parameter]
+    public EventCallback<ProductVM> eventAddToCart { get; set; }
+}
