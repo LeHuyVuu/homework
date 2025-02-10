@@ -1,8 +1,0 @@
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.GeneratedMSBuildEditorConfig.editorconfig
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.AssemblyInfoInputs.cache
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.AssemblyInfo.cs
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.csproj.CoreCompileInputs.cache
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.MvcApplicationPartsAssemblyInfo.cache
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.RazorAssemblyInfo.cache
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.RazorAssemblyInfo.cs
-D:\Cybersoft .NET\Homework\HomeWork_Blazor\obj\Debug\net6.0\HomeWork_Blazor.sourcelink.json

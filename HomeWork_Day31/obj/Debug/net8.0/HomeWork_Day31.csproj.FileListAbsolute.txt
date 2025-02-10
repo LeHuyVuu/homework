@@ -30,3 +30,5 @@ D:\Cybersoft .NET\Homework\HomeWork_Day31\obj\Debug\net8.0\refint\HomeWork_Day31
 D:\Cybersoft .NET\Homework\HomeWork_Day31\obj\Debug\net8.0\HomeWork_Day31.pdb
 D:\Cybersoft .NET\Homework\HomeWork_Day31\obj\Debug\net8.0\HomeWork_Day31.genruntimeconfig.cache
 D:\Cybersoft .NET\Homework\HomeWork_Day31\obj\Debug\net8.0\ref\HomeWork_Day31.dll
+D:\Cybersoft .NET\Homework\HomeWork_Day31\obj\Debug\net8.0\scopedcss\Pages\Components\Burger.razor.rz.scp.css
+D:\Cybersoft .NET\Homework\HomeWork_Day31\obj\Debug\net8.0\scopedcss\Pages\MyBurger.razor.rz.scp.css
