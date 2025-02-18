@@ -1,0 +1,74 @@
+@page "/admin/product-management"
+@inject BlazorProductManagement.Data.ProductService ProductService
+@inject NavigationManager nav
+@using BlazorProductManagement.Data
+@using Microsoft.AspNetCore.SignalR.Client
+
+<h3>Product Management</h3>
+<a href="/admin/product" class="btn btn-success mb-3">Add new product</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in products)
+        {
+            <tr>
+                <td><img src="@product.ImageUrl" width="50" /></td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>
+                    <button class="btn btn-danger" @onclick="() => DeleteProduct(product.Id)">Del</button>
+                    <button class="btn btn-warning">Edit</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<Product> products = new();
+    private HubConnection? ProductHub;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (ProductHub is null)
+        {
+            ProductHub = new HubConnectionBuilder()
+            .WithUrl(nav.ToAbsoluteUri("/product-hub"))
+            .Build();
+
+            ProductHub.On<List<Product>>("GetAllProduct", async (lstProduct) =>
+            {
+                products = lstProduct;
+                await InvokeAsync(StateHasChanged);
+            });
+
+            await ProductHub.StartAsync();
+        }
+    }
+
+    private async Task DeleteProduct(int id)
+    {   
+        Console.WriteLine("Delete product: " + id);
+        await ProductHub.SendAsync("DeleteProduct", id);
+        StateHasChanged();
+    }
+
+
+
+    public async ValueTask DisposeAsync()
+    {
+        if (ProductHub is not null)
+        {
+            await ProductHub.StopAsync();
+            await ProductHub.DisposeAsync();
+        }
+    }
+}

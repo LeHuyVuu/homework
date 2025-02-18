@@ -1,0 +1,58 @@
+@page "/admin/product"
+@inject BlazorProductManagement.Data.ProductService ProductService
+@inject NavigationManager nav
+@using BlazorProductManagement.Data
+@using Microsoft.AspNetCore.SignalR.Client
+
+<h3>Add Product</h3>
+
+<div class="card p-3">
+    <div class="form-group">
+        <label>Name</label>
+        <input @bind="product.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Alias</label>
+        <input @bind="product.Alias" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input @bind="product.Price" type="number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea @bind="product.Description" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary mt-2" @onclick="SaveProduct">Add Product</button>
+</div>
+
+@code {
+    private Product product = new();
+    private HubConnection? ProductHub;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (ProductHub is null)
+        {
+            ProductHub = new HubConnectionBuilder()
+                .WithUrl(nav.ToAbsoluteUri("/product-hub"))
+                .Build();
+            await ProductHub.StartAsync();
+        }
+    }
+
+    private async Task SaveProduct()
+    {
+        await ProductHub.SendAsync("AddProduct", product);
+        nav.NavigateTo("/admin/product-management");
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (ProductHub is not null)
+        {
+            await ProductHub.StopAsync();
+            await ProductHub.DisposeAsync();
+        }
+    }
+}
