@@ -25,8 +25,9 @@
                 <td>@product.Price</td>
                 <td>
                     <button class="btn btn-danger" @onclick="() => DeleteProduct(product.Id)">Del</button>
-                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-warning" @onclick="() => UpdateProduct(product.Id)">Edit</button>
                 </td>
+
             </tr>
         }
     </tbody>
@@ -55,20 +56,18 @@
     }
 
     private async Task DeleteProduct(int id)
-    {   
+    {
         Console.WriteLine("Delete product: " + id);
         await ProductHub.SendAsync("DeleteProduct", id);
         StateHasChanged();
     }
-
-
-
-    public async ValueTask DisposeAsync()
+    private void UpdateProduct(int id)
     {
-        if (ProductHub is not null)
-        {
-            await ProductHub.StopAsync();
-            await ProductHub.DisposeAsync();
-        }
+        nav.NavigateTo($"/admin/product/{id}");
     }
+
 }
+
+
+
+

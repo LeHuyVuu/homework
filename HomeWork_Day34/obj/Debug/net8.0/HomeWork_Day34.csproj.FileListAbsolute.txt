@@ -49,3 +49,8 @@ D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
 D:\Cybersoft .NET\Homework\HomeWork_Day34\obj\Debug\net8.0\HomeWork_Day34.csproj.AssemblyReference.cache
 D:\Cybersoft .NET\Homework\HomeWork_Day34\obj\Debug\net8.0\HomeWork.B1F3642B.Up2Date
+D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\publish\web.config
+D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\publish\appsettings.Development.json
+D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\publish\appsettings.json
+D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\publish\HomeWork_Day34.deps.json
+D:\Cybersoft .NET\Homework\HomeWork_Day34\bin\Debug\net8.0\publish\HomeWork_Day34.runtimeconfig.json

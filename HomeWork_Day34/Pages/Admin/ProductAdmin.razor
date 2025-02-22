@@ -1,10 +1,10 @@
-@page "/admin/product"
+@page "/admin/product/{productId:int?}"
 @inject BlazorProductManagement.Data.ProductService ProductService
 @inject NavigationManager nav
 @using BlazorProductManagement.Data
 @using Microsoft.AspNetCore.SignalR.Client
 
-<h3>Add Product</h3>
+<h3>@(isEditing ? "Edit Product" : "Add Product")</h3>
 
 <div class="card p-3">
     <div class="form-group">
@@ -23,12 +23,16 @@
         <label>Description</label>
         <textarea @bind="product.Description" class="form-control"></textarea>
     </div>
-    <button class="btn btn-primary mt-2" @onclick="SaveProduct">Add Product</button>
+    <button class="btn btn-primary mt-2" @onclick="SaveOrUpdateProduct">
+        @(isEditing ? "Update Product" : "Add Product")
+    </button>
 </div>
 
 @code {
     private Product product = new();
     private HubConnection? ProductHub;
+    private bool isEditing = false;
+    [Parameter] public int? productId { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -39,11 +43,25 @@
                 .Build();
             await ProductHub.StartAsync();
         }
+
+        // Kiểm tra nếu có `productId`, thì lấy thông tin sản phẩm để chỉnh sửa
+        if (productId.HasValue)
+        {
+            product = ProductService.GetProductById(productId.Value) ?? new Product();
+            isEditing = true;
+        }
     }
 
-    private async Task SaveProduct()
+    private async Task SaveOrUpdateProduct()
     {
-        await ProductHub.SendAsync("AddProduct", product);
+        if (isEditing)
+        {
+            await ProductHub.SendAsync("UpdateProduct", product);
+        }
+        else
+        {
+            await ProductHub.SendAsync("AddProduct", product);
+        }
         nav.NavigateTo("/admin/product-management");
     }
 

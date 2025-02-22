@@ -8,8 +8,8 @@ namespace BlazorProductManagement.Data
     {
         private List<Product> products = new()
         {
-            new Product { Id = 1, Name = "Nike Air Max", Alias = "air-max", Price = 350, Description = "Best running shoes", ImageUrl = "/images/nike_air_max.jpg" },
-            new Product { Id = 2, Name = "Vans Old Skool", Alias = "vans-old-skool", Price = 250, Description = "Classic skate shoes", ImageUrl = "/images/vans_old_skool.jpg" }
+            new Product { Id = 1, Name = "Nike Air Max", Alias = "air-max", Price = 350, Description = "Best running shoes", ImageUrl = "https://th.bing.com/th/id/OIP.C0b3zlLfZ0GD-5txQXOkzQHaE8?rs=1&pid=ImgDetMain" },
+            new Product { Id = 2, Name = "Vans Old Skool", Alias = "vans-old-skool", Price = 250, Description = "Classic skate shoes", ImageUrl = "https://vn-live-01.slatic.net/p/52470293e688d6eef62b7ed9074a41eb.jpg" }
         };
 
         public List<Product> GetProducts() => products;
@@ -18,7 +18,7 @@ namespace BlazorProductManagement.Data
 
         public void AddProduct(Product product)
         {
-            product.Id = products.Max(p => p.Id) + 1;
+            product.Id = products.Any() ? products.Max(p => p.Id) + 1 : 1;
             products.Add(product);
         }
 

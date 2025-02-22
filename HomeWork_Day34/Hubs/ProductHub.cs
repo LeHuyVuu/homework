@@ -32,6 +32,14 @@ public class ProductHub : Hub
         var updatedList = _productService.GetProducts();
         await Clients.All.SendAsync("GetAllProduct", updatedList);
     }
+    public async Task UpdateProduct(Product updatedProduct)
+    {
+        _productService.UpdateProduct(updatedProduct);
+        var updatedList = _productService.GetProducts();
+        await Clients.All.SendAsync("GetAllProduct", updatedList);
+    }
+
+
 
 
 
