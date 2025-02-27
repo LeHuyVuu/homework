@@ -1,0 +1,81 @@
+USE master;
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'db_QLBanSach')
+    CREATE DATABASE db_QLBanSach;
+GO
+USE db_QLBanSach;
+
+CREATE TABLE KhachHang (
+    MaKH INT IDENTITY(1,1) PRIMARY KEY,
+    HoTen NVARCHAR(100),
+    GioiTinh NVARCHAR(10),
+    NgaySinh DATE,
+    DienThoai NVARCHAR(15),
+    TaiKhoan NVARCHAR(50) UNIQUE,
+    MatKhau NVARCHAR(255),
+    Email NVARCHAR(100) UNIQUE,
+    DiaChi NVARCHAR(MAX)
+);
+
+CREATE TABLE DonHang (
+    MaDonHang INT IDENTITY(1,1) PRIMARY KEY,
+    MaKH INT,
+    NgayDat DATE,
+    NgayGiao DATE,
+    DaThanhToan BIT,
+    TinhTrangGH NVARCHAR(50),
+    FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH) ON DELETE CASCADE
+);
+
+CREATE TABLE TacGia (
+    MaTacGia INT IDENTITY(1,1) PRIMARY KEY,
+    TenTacGia NVARCHAR(100),
+    DienThoai NVARCHAR(15),
+    TieuSu NVARCHAR(MAX),
+    DiaChi NVARCHAR(MAX)
+);
+
+CREATE TABLE ChuDe (
+    MaChuDe INT IDENTITY(1,1) PRIMARY KEY,
+    TenChuDe NVARCHAR(255)
+);
+
+CREATE TABLE NhaXuatBan (
+    MaNSX INT IDENTITY(1,1) PRIMARY KEY,
+    TenNSB NVARCHAR(255),
+    DiaChi NVARCHAR(MAX),
+    DienThoai NVARCHAR(15)
+);
+
+CREATE TABLE Sach (
+    MaSach INT IDENTITY(1,1) PRIMARY KEY,
+    TenSach NVARCHAR(255),
+    MaChuDe INT,
+    MaNSX INT,
+    GiaBan DECIMAL(10,2),
+    AnhBia NVARCHAR(255),
+    MoTa NVARCHAR(MAX),
+    SoLuongTon INT,
+    NgayCapNhat DATE,
+    FOREIGN KEY (MaChuDe) REFERENCES ChuDe(MaChuDe) ON DELETE SET NULL,
+    FOREIGN KEY (MaNSX) REFERENCES NhaXuatBan(MaNSX) ON DELETE SET NULL
+);
+
+CREATE TABLE Gom (
+    MaDonHang INT,
+    MaSach INT,
+    SoLuong INT,
+    DonGia DECIMAL(10,2),
+    PRIMARY KEY (MaDonHang, MaSach),
+    FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang) ON DELETE CASCADE,
+    FOREIGN KEY (MaSach) REFERENCES Sach(MaSach) ON DELETE CASCADE
+);
+
+CREATE TABLE ThamGia (
+    MaTacGia INT,
+    MaSach INT,
+    VaiTro NVARCHAR(50),
+    ViTri INT,
+    PRIMARY KEY (MaTacGia, MaSach),
+    FOREIGN KEY (MaTacGia) REFERENCES TacGia(MaTacGia) ON DELETE CASCADE,
+    FOREIGN KEY (MaSach) REFERENCES Sach(MaSach) ON DELETE CASCADE
+);
